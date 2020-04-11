@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} CGPA Prediction {% endblock %}
+{% block content %}
+<div class="container">
+    <h1>CGPA Prediction</h1>
+    
+
+    <form action="" method="post">
+        <div class="form-group">
+            {{ form.sat_score.label }} {{ form.sat_score(class="form-control",placeholder="What's your SAT Score?") }}
+        </div>
+
+        <div class="input submit">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <br>
+        {% for message in messages %}
+        <div class="alert alert-info" role="alert">{{ message[1] }}</div>
+        {% endfor %}
+    
+    {% endif %}
+    {% endwith %}
+</div>
+{% endblock %}

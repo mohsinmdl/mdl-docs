@@ -1,0 +1,4 @@
+Consider a word text editor where a user can type alphabet takes one byte in momory . 
+Implemet flyweight patter to use memory efficeiently for storage of characters 
+
+Alphabets are A,B,C,D,E
