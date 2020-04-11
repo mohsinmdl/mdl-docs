@@ -254,3 +254,9 @@ git branch --set-upstream-to=origin/master
 ```
 
 
+## Save VSCODE Git Credentials
+If you wanna save your git password in VSCode, below is the command for that purpose --
+```
+git config --global credential.helper store
+
+```
