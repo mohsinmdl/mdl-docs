@@ -224,13 +224,33 @@ git submodule update --remote --merge
 rm -rf .git
 ```
 
+## Error
+Git refusing to merge unrelated histories 
 
-## 123 Testing
+!!! failure
+    git  pull origin master
+    From https://github.com/mohsinmdl/mdl-portfolio
+    * branch            master     -> FETCH_HEAD
+    fatal: refusing to merge unrelated histories
 
-## 345 testing
+!!! failure
+    There is no tracking information for the current branch.
+    Please specify which branch you want to merge with.
+    See git-pull(1) for details.
 
+### solution
 
-## Final Testing
+```
+git pull origin branchname --allow-unrelated-histories
+```
 
+```
+git --work-tree="." pull --allow-unrelated-histories
+```
+
+```
+git branch --set-upstream-to=origin/master
+
+```
 
 
