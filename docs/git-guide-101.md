@@ -260,3 +260,29 @@ If you wanna save your git password in VSCode, below is the command for that pur
 git config --global credential.helper store
 
 ```
+
+
+!!! failure
+    git submodule add https://github.com/mohsinmdl/blogs-deploy public
+    'public' already exists in the index
+
+
+```
+git ls-files
+```
+
+```
+git rm --cached <DIR>
+```
+
+```
+git rm -f --cached <DIR>
+```
+
+Error
+!!! failure
+    fatal: Please stage your changes to .gitmodules or stash them to proceed
+
+```
+git rm --cached .gitmodules
+```
