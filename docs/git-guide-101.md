@@ -295,6 +295,8 @@ cd .git
 cd modules/
 rm -rf mdl-docs/
 
+***
+
 ### Git Pull with Submodule
 For a repo with submodules, we can pull all submodules using
 git submodule update --init --recursive
