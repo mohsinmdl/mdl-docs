@@ -299,8 +299,9 @@ rm -rf mdl-docs/
 
 ### Git Pull with Submodule
 For a repo with submodules, we can pull all submodules using
+```
 git submodule update --init --recursive
-
+```
 for the first time. All submodules will be pulled down locally.
 To update submodules, we can use
 ```
