@@ -303,6 +303,8 @@ For a repo with submodules, we can pull all submodules using
 git submodule update --init --recursive
 ```
 for the first time. All submodules will be pulled down locally.
+
+
 To update submodules, we can use
 ```
 git submodule update --recursive --remote
@@ -311,6 +313,12 @@ git submodule update --recursive --remote
 or simply
 ```
 git pull --recurse-submodules
+```
+
+**Update Git submodule to latest commit on origin**
+
+```
+git submodule foreach git checkout master
 ```
 ***
 
