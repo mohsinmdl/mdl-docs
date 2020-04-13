@@ -128,7 +128,10 @@ $0
 $1scope.span.set_tag('response', $2)$0
 ```
 
-#### 02 - Return `String`
+#### 02 - Return `Strings`
+
+> JSON String
+
 **Regex Pattern**
 ```
 (\s*)return jsonify\("([\w\s]*)"\)
@@ -137,6 +140,18 @@ $1scope.span.set_tag('response', $2)$0
 ```
 $1scope.span.set_tag('response', '$2')$0
 ```
+> Simple String
+
+**Regex Pattern**
+```
+(\s*)return\s*["']([\w\s]*)['"]
+```
+**Regex Pattern**
+```
+$1scope.span.set_tag('response', "$2")$0
+```
+
+
 #### 03 - Return `Json Data`
 **Regex Pattern** 
 ```
@@ -155,6 +170,13 @@ $1scope.span.set_tag('response', dict({$2}))$0
 ```
 $1scope.span.set_tag('response', $2)$0
 ```
+
+!!! hint
+    add the following snippet
+
+```
+self.graph.run 
+```
 #### 05 - Return `response.json()`
 **Regex Pattern**
 ```
@@ -169,13 +191,31 @@ $0
 #### 06 - Return True/False
 **Regex Pattern**
 ```
-(\s*)return response\.json\(\)
+(\s*)return True
 ```
-**Regex Pattern**
 ```
-$1scope.span.set_tag('response', response.json())
+$1scope.span.set_tag('response',  'True')
 $0
 ```
+
+**Regex Pattern**
+```
+(\s*)return False
+```
+```
+$1scope.span.set_tag('response',  'False')
+$0
+```
+
+#### 07 - Adding Print logging to jaeger
+**Regex Pattern**
+```
+([\s]*)print\((["'][\w\s:."]*[+\sstr\(\w\)]*)\)\n
+```
+```
+$1scope.span.set_tag("log", $2)$0
+```
+![alt text](../../../img/jaeger/log-span.png)
 
 !!! Tip
     After applying regex, methods were reindented from their actual location, you have to manually indent the methods. ++ctrl+close-bracket++
@@ -222,6 +262,9 @@ headers= carrier
 
 #### Extracting Spans Replacement
 
+!!! hint
+    This portion is already implemented while injecting spans
+
 **Regex Pattern**
 ```
 ([\s]*)with tracer.start_active_span
@@ -260,16 +303,17 @@ from opentracing.propagation import Format
 
 
 
-
-
-
-
-
 ## Branches Created for Tracing
 ### Names of Branches
 ```
 git branch
 ```
+
+- **✔tracing_chat_api,-default-hiring--timeslot,-emailapi✔**
+    - ChatAPI
+    - default_hiring_procedure_for_company
+    - default_time_slot_for_company
+    - email_api
 
 - **✔Tracing-GDB_Consumers✔**
     - company_bookmarks_candidate 
