@@ -67,8 +67,8 @@ markdown_extensions:
       repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.tasklist:
-    custom_checkbox: true
+  # - pymdownx.tasklist:
+    # custom_checkbox: true
     - pymdownx.tilde
   # - pymdownx.superfences
     
