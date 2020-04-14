@@ -1,2 +1,2 @@
 mkdocs
-pymdownx.emoji
+pymdown-extensions
