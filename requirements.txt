@@ -1,5 +1,5 @@
 mkdocs
 pymdown-extensions
-markdown>=3.1,<3.2
+Markdown>=3.2.1
 mkdocs-material
 markdown-include
