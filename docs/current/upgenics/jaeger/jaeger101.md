@@ -1,13 +1,14 @@
 
 # Implementing Jaeger Tracing
 ***
-## Adding Service name in `jaegerTracing.py`
+## Adding Service Name
 ```python
 service_name = "ShortlistCadidatesForJobAPI"
 ```
 **Files to exclude**
 `Api.py, jaegerTracing.py, registrator.py`
 
+***
 ## Importing Libraries
 
 ### Flask API Tracing
@@ -19,17 +20,23 @@ tracer = jaegerTracing.getTracerInstance()
 from flask_opentracing import FlaskTracing
 tracing = FlaskTracing(tracer, True, app)
 ```
-#### Manual Traces All Routes
+#### Import Libraries via Regrx
 **Regex Pattern**
-```python
-@app.route
 ```
-**Regex Replace**
-```python
-@tracing.trace()
-$0
+cors = CORS\(app, resources=\{r"/\*": \{"origins": "\*"\}\}\)
+```
+**Regex Pattern**
+```
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Distributed Tracing
+import jaegerTracing
+tracer = jaegerTracing.getTracerInstance()
+from flask_opentracing import FlaskTracing
+tracing = FlaskTracing(tracer, True, app)
 ```
 
+***
 ### Batch Editing in Client files
 #### Import Libraries without Regex
 ```python
@@ -54,23 +61,52 @@ from opentracing.propagation import Format
  
 $0
 ```
+***
 ## Injecting Spans
-### Methods with try-except
 
-!!! tip
-    You can also have to check whether there exist any method without having class. Mehthod with class may have no leading spaces in it which we are using in the regex.
+### Methods with try-except (Without Class)
+
+!!! Caution
+    When you put the following opentracing implementaion the code mush below should reindent towards right by 4 space (1 Tab).
+
+!!! hint 
+    Add jaeger imports -- to the files with no class
 
 
-`(def\s([\w]+)\s?\(self,*\s*([\w,\s=']*)\)\s*:)\s*
-    (try:)`
-    
+**Regex Pattern**
+```
+\n(def\s([\w]+)\s?\(self,*\s*([\w,\s=']*)\)\s*:)\s*
+    (try:)
+```
+**Regex Pattern**
 ```
 $1
     $4
         span_ctx = tracer.extract(format=Format.TEXT_MAP, carrier={})
-        with tracer.start_active_span('$3', child_of=span_ctx) as scope:
+        with tracer.start_active_span('$2', child_of=span_ctx) as scope:
             scope.span.set_tag('args', [$3])
 ```
+### Methods without try-except
+**Regex Pattern**
+```
+\n(def\s([\w]+)\s?\(self,*\s*([\w,\s=']*)\)\s*:)
+```
+**Regex Pattern**
+```
+
+$1
+    span_ctx = tracer.extract(format=Format.TEXT_MAP, carrier={})
+    with tracer.start_active_span('$2', child_of=span_ctx) as scope:
+        scope.span.set_tag('args', [$3])
+```
+
+
+
+
+
+*******************************************************************************************************
+### Methods with try-except
+
 
 **Regex Pattern**
 ```
@@ -217,20 +253,25 @@ $1scope.span.set_tag("log", $2)$0
 ```
 ![alt text](../../../img/jaeger/log-span.png)
 
-!!! Tip
-    After applying regex, methods were reindented from their actual location, you have to manually indent the methods. ++ctrl+close-bracket++
 
+***
 ## Keywords Used in All APIS
 
 `args`
 `response`
+`query`
+`log`
 
 
+***
 ## RPC Inject/Extract Calls Regex
 
 
 #### Injecting Spans Replacement
-***
+
+!!! hint
+    Do not include url with KONG calling
+
 **Regex Pattern**
 ```
 ([\s]*)response\s*=\s*requests.
@@ -274,7 +315,7 @@ headers= carrier
 $1span_ctx = tracer.extract(format=Format.TEXT_MAP, carrier={})
 $0
 ```
-***
+
 **Regex Pattern**
 ```
 ) as scope:
@@ -284,36 +325,61 @@ $0
 , child_of=span_ctx) as scope:
 ```
 ***
-**Regex Pattern**
-```python
-# Distributed Tracing
-from opentracing_instrumentation.request_context import get_current_span, span_in_context
-import jaegerTracing
-tracer = jaegerTracing.getTracerInstance()
-```
+
+
+!!! hint
+    Please reindent all the files where you have done changes -- feel free to use the following snippet to searching out the files will require reindentation.
+
+!!! Tip
+    After applying regex, methods were reindented from their actual location, you have to manually indent the methods. ++ctrl+close-bracket++
 
 **Regex Pattern**
-```python
-# Distributed Tracing
-from opentracing_instrumentation.request_context import get_current_span, span_in_context
-import jaegerTracing
-tracer = jaegerTracing.getTracerInstance()
-from opentracing.propagation import Format
+```
+class\s\w*\(\):
 ```
 
 
-
+***
 ## Branches Created for Tracing
 ### Names of Branches
 ```
 git branch
 ```
 
+- **✔Tracing--RemaingAPIs-2✔**
+    - Social
+        - company_activity_api                       
+        - company_activity_apis
+        - connection
+        - follow_company
+        - follow_user
+        - job_post
+        - news_feed
+        - suggested_friends
+        - url_post
+        - user_comment_on_post_web_notifications
+        - user_like_post_web_notifications
+        - user_notifications
+        - user_share_post_web_notifications
+
+- **✔Tracing--RemaingAPIs-1✔**
+    - profile_and_job_post_comparison_ratio_api
+    - post_seen_api
+    - Jobs_RelatedTo_Skills_Experience
+    - profile_seen_api
+
+- **✔Tracing-GDB_APIs✔**
+    - GDB_APIs
+        - Activity
+        - EmailLogs
+        - NewsFeed
+
 - **✔tracing_chat_api,-default-hiring--timeslot,-emailapi✔**
     - ChatAPI
     - default_hiring_procedure_for_company
     - default_time_slot_for_company
     - email_api
+
 
 - **✔Tracing-GDB_Consumers✔**
     - company_bookmarks_candidate 
