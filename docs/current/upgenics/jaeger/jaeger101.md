@@ -346,6 +346,14 @@ class\s\w*\(\):
 git branch
 ```
 
+- **✔Tracing--RemaingAPIs-3✔**
+    - Publisher_Bridge
+    - Schedular
+    - system_configuration_api
+    - system_configuration_set_jobpost_to_expire_routine
+    - top_data_api
+    - URL_meta_data_api
+
 - **✔Tracing--RemaingAPIs-2✔**
     - Social
         - company_activity_api                       
@@ -428,6 +436,7 @@ git branch
     - revamp_laravel_to_python_apis
         - jobpost_python_apis
 - **shortlistedCandidate_tracing_with_Jaeger** 
+    - scheduler_api
     - ✔ shortlist_candidates_api ✔
     - revamp_laravel_to_python_apis
         - ✔ admin_operation_python_apis ✔         
