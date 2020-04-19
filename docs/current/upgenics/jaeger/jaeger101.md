@@ -346,6 +346,10 @@ class\s\w*\(\):
 git branch
 ```
 
+
+- **✔Tracing--RemaingAPIs-4✔**
+    - Organizational Data (revamp)
+
 - **✔Tracing--RemaingAPIs-3✔**
     - Publisher_Bridge
     - Schedular
@@ -416,7 +420,7 @@ git branch
     - user_url_post_like
     - user_url_post_unlike
 
-- **Tracing_skill_social**
+- **✔Tracing_skill_social✔**
     - Skill_Social/endorse_skill_api
     - Skill_Social/rate_skill_api
     - Skill_Social/skill_comment_api
@@ -434,17 +438,17 @@ git branch
     - ✔bookmark_job_api✔
 - **Tracing-JobPost-API**
     - revamp_laravel_to_python_apis
-        - jobpost_python_apis
+        - ✔jobpost_python_apisjobpost_python_apis✔
 - **shortlistedCandidate_tracing_with_Jaeger** 
-    - scheduler_api
+    - ✔scheduler_api✔
     - ✔ shortlist_candidates_api ✔
     - revamp_laravel_to_python_apis
         - ✔ admin_operation_python_apis ✔         
         - ✔ Consumer_UserName_Image_Storage ✔
         - ✔ profile_python_apis ✔
         - ✔ registeration_python_service_apis 
-- **jeager_implementation_organizationalDataAPI**
-    - organizational_data
+- **jeager_implementation_organizationalDataAPI** (obsolete)
+    - organizational_data (deprecated)
 
 <!-- 
 

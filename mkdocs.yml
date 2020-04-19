@@ -14,6 +14,7 @@ nav:
   - Django | Heroku: index.md
   - Linux Guide 101: linux101/linux-guide.md
   - Ubuntu Guide 101: Ubuntu-guide-101.md
+  - Elasticsearch 101: elasticsearch101.md
   - Jaeger Guide 101: 
     - Jaeger 101: current/upgenics/jaeger/jaeger101.md
     - Jaeger RPC: current/upgenics/jaeger/jaegerRPC.md
