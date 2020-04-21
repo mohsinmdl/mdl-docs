@@ -18,6 +18,7 @@ nav:
   - Jaeger Guide 101: 
     - Jaeger 101: current/upgenics/jaeger/jaeger101.md
     - Jaeger RPC: current/upgenics/jaeger/jaegerRPC.md
+  - Node.js 101: nodejs101.md
   - Git Guide 101:  git-guide-101.md
   - Git Guide Guru: git-guide-guru.md
   - Flask Guide 101: flask-doc/Flask Guide 101.md
