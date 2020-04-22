@@ -20,7 +20,8 @@ npm -v
 ```bash
 node -v
 ```
-**Installing Packages**
+## Installing Packages
+
 ```bash
 npm init
 ```
@@ -73,7 +74,7 @@ Create a new file `.babelrc` with the same directory of `package.json` file.
 !!! hint
     Babel is used to compile the project
 
-
+## Simple chat app
 Create a file `index.js` on the same level of node_modules directory and paste the following snipet into it.
 
 
@@ -152,11 +153,11 @@ and the `index.html` (client) should look like this —
 {!scripts/socketio/withbootstrap/public/index.html!}
 ```
 
-**Connect Disconnect**
+## **Connect / Disconnect Events** 
 
 > [index.js](scripts/socketio/connectDisconnect/index.js)
 
-```javascript
+```javascript hl_lines="14 21"
 {!scripts/socketio/connectDisconnect/index.js!}
 ```
 
@@ -164,18 +165,18 @@ and the `index.html` (client) should look like this —
 
 > [index.html](scripts/socketio/connectDisconnect/public/index.html)
 
-```javascript
+```javascript hl_lines="45"
 {!scripts/socketio/connectDisconnect/public/index.html!}
 ```
 
 
-**NameSpace Setup**
+## **NameSpace Setup**
 
 Now, we are going to add a namespace   `tech` to our server.
 
 > [index.js](scripts/socketio/namespace/index.js)
 
-```javascript
+```javascript hl_lines="15"
 {!scripts/socketio/namespace/index.js!}
 ```
 
@@ -183,7 +184,7 @@ and the `index.html` (client) should look like this —
 
 > [index.html](scripts/socketio/namespace/public/index.html)
 
-```javascript
+```javascript hl_lines="38"
 {!scripts/socketio/namespace/public/index.html!}
 ```
 
@@ -194,7 +195,7 @@ and the `index.html` (client) should look like this —
 
 > [index.js](scripts/socketio/room01/index.js)
 
-```javascript
+```javascript hl_lines="18 19 20 23 24 25"
 {!scripts/socketio/room01/index.js!}
 ```
 
@@ -202,13 +203,13 @@ and the `index.html` (client) should look like this —
 
 > [index.html](scripts/socketio/room01/public/index.html)
 
-```javascript
+```javascript hl_lines="38 42 49"
 {!scripts/socketio/room01/public/index.html!}
 ```
 
 
 
-**Init Room Javascript**
+**JavaScript Room with seperate base file **
 
 > [index.js](scripts/socketio/room02/index.js)
 
@@ -220,7 +221,7 @@ and the `index.html` (client) should look like this —
 
 > [index.html](scripts/socketio/room02/public/index.html)
 
-```javascript
+```javascript hl_lines="19 20 21"
 {!scripts/socketio/room02/public/index.html!}
 ```
 
@@ -231,7 +232,7 @@ and the `index.html` (client) should look like this —
 ```
 
 
-**Complete tech rooms**
+## **Complete tech rooms**
 
 > [index.js](scripts/socketio/room03/index.js)
 
