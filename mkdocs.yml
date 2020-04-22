@@ -4,11 +4,11 @@
 site_name: Mohsin | Projects Docs
 site_description: Mohsin Mahmood Projects Documentations
 site_author: Mohsin Mahmood
-site_url: https://mohsinmdl.github.io
+site_url: https://mohsinmdl.com
 
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2019 Martin Donath'
+copyright: 'Copyright &copy; 2016 - 2020 Mohsin Mahmood'
 
 nav:
   - Django | Heroku: index.md
@@ -19,6 +19,7 @@ nav:
     - Jaeger 101: current/upgenics/jaeger/jaeger101.md
     - Jaeger RPC: current/upgenics/jaeger/jaegerRPC.md
   - Node.js 101: nodejs101.md
+  - Socket.io 101: socketio.md
   - Git Guide 101:  git-guide-101.md
   - Git Guide Guru: git-guide-guru.md
   - Flask Guide 101: flask-doc/Flask Guide 101.md
@@ -69,10 +70,11 @@ markdown_extensions:
       repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.superfences
   # - pymdownx.tasklist:
-    # custom_checkbox: true
-    # - pymdownx.tilde
-  # - pymdownx.superfences
+  #   custom_checkbox: true
+  #   - pymdownx.tilde
+  # - pymdownx.tabbed
     
 
 
