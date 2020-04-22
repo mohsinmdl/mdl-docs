@@ -2,7 +2,7 @@
 
 Socket.IO is JavaScript implementation to work with HTML 5 WebSockets. In can be used in NodeJS & based server frameworks for server-side, while client-side can be integrated with pure JavaScript, AngularJS, React.
 
-Socket.IO proves to be promising with over 35K GitHub Stars. Furthermore it’s stable for production level with V2.0.0 being released in 2017.
+Socket.IO proves to be promising with over 49K [GitHub Stars](https://github.com/socketio/socket.io). Furthermore it’s stable for production level with V2.0.0 being released in 2017.
 
 
 > Quick links Documentation
@@ -20,7 +20,7 @@ npm -v
 ```bash
 node -v
 ```
-## Installing Packages
+## 0 Installing Packages
 
 ```bash
 npm init
@@ -41,7 +41,6 @@ npm i --save express nodemon socket.io
 ??? info "What is `Socket.io`"
     Socket.IO is JavaScript implementation to work with HTML 5 WebSockets. In can be used in NodeJS & based server frameworks for server-side, while client-side can be integrated with pure JavaScript, AngularJS, React.[Socket.io](https://socket.io/docs/) 
 
-
 ```bash
 npm i --save-dev babel-cli babel-preset-env babel-preset-stage-0
 ```
@@ -58,7 +57,7 @@ In `package.json` file add these lines in the script keyword
 Create a new file `.babelrc` with the same directory of `package.json` file.  
 
 
-!!! hint ""
+!!! hint
 
     Insert the following snippet into the newly created file.
     ```json
@@ -74,7 +73,7 @@ Create a new file `.babelrc` with the same directory of `package.json` file.
 !!! hint
     Babel is used to compile the project
 
-## Simple chat app
+## 1 Simple chat app
 Create a file `index.js` on the same level of node_modules directory and paste the following snipet into it.
 
 
@@ -153,7 +152,7 @@ and the `index.html` (client) should look like this —
 {!scripts/socketio/withbootstrap/public/index.html!}
 ```
 
-## **Connect / Disconnect Events** 
+## 2 **Connect / Disconnect Events** 
 
 > [index.js](scripts/socketio/connectDisconnect/index.js)
 
@@ -170,7 +169,7 @@ and the `index.html` (client) should look like this —
 ```
 
 
-## **NameSpace Setup**
+## 3 **NameSpace Setup**
 
 Now, we are going to add a namespace   `tech` to our server.
 
@@ -189,7 +188,7 @@ and the `index.html` (client) should look like this —
 ```
 
 
-## Setting up Rooms
+## 4 Setting up Rooms
 
 **Init Room Javascript**
 
@@ -232,7 +231,7 @@ and the `index.html` (client) should look like this —
 ```
 
 
-## **Complete tech rooms**
+## 5 **Complete tech rooms**
 
 > [index.js](scripts/socketio/room03/index.js)
 
@@ -266,7 +265,7 @@ and the `index.html` (client) should look like this —
 
 ```
 
-## Debug Tool
+## 6 Debug Tool
 
 
 **Manually**

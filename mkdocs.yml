@@ -31,6 +31,7 @@ nav:
   - Assignment: Contact/ass2.md
   - MKDocs Guide 101: mkdocs101.md
   - AIO: all-in-one.md
+  - Keyboard Shortcuts: keyShortcut.md
   - Contact:
     - About: Contact/about.md
     - Markdown: output.md
@@ -89,3 +90,6 @@ extra:
       link: https://twitter.com/joinmohsinmdl
     - type: linkedin
       link: https://linkedin.com/in/mohsinmdl
+
+
+      

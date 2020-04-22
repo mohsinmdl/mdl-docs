@@ -1,7 +1,7 @@
 
 # Implementing Jaeger Tracing
 ***
-## Adding Service Name
+## 0. Adding Service Name
 ```python
 service_name = "ShortlistCadidatesForJobAPI"
 ```
@@ -9,10 +9,10 @@ service_name = "ShortlistCadidatesForJobAPI"
 `Api.py, jaegerTracing.py, registrator.py`
 
 ***
-## Importing Libraries
+## 1. Importing Libraries
 
-### Flask API Tracing
-#### Automated Traces All Routes
+### 1.0 Flask API Tracing
+#### 1.0.0 Automated Traces All Routes
 ```python
 # Distributed Tracing
 import jaegerTracing
@@ -20,7 +20,7 @@ tracer = jaegerTracing.getTracerInstance()
 from flask_opentracing import FlaskTracing
 tracing = FlaskTracing(tracer, True, app)
 ```
-#### Import Libraries via Regrx
+#### 1.0.1 Import Libraries via Regrx
 **Regex Pattern**
 ```
 cors = CORS\(app, resources=\{r"/\*": \{"origins": "\*"\}\}\)
@@ -37,8 +37,8 @@ tracing = FlaskTracing(tracer, True, app)
 ```
 
 ***
-### Batch Editing in Client files
-#### Import Libraries without Regex
+### 1.1 Batch Editing in Client files
+#### 1.1.0 Import Libraries without Regex
 ```python
 # Distributed Tracing
 from opentracing_instrumentation.request_context import get_current_span, span_in_context
@@ -46,7 +46,7 @@ import jaegerTracing
 tracer = jaegerTracing.getTracerInstance()
 from opentracing.propagation import Format
 ```
-#### Import Libraries via Regrx
+#### 1.1.1 Import Libraries via Regrx
 **Regex Pattern**
 ```
 class\s\w*\(\):
@@ -62,9 +62,9 @@ from opentracing.propagation import Format
 $0
 ```
 ***
-## Injecting Spans
+## 2. Injecting Spans
 
-### Methods with try-except (Without Class)
+### 2.0 Methods with try-except (Without Class)
 
 !!! Caution
     When you put the following opentracing implementaion the code mush below should reindent towards right by 4 space (1 Tab).
@@ -86,7 +86,7 @@ $1
         with tracer.start_active_span('$2', child_of=span_ctx) as scope:
             scope.span.set_tag('args', [$3])
 ```
-### Methods without try-except
+### 2.1 Methods without try-except
 **Regex Pattern**
 ```
 \n(def\s([\w]+)\s?\(self,*\s*([\w,\s=']*)\)\s*:)
@@ -105,7 +105,7 @@ $1
 
 
 *******************************************************************************************************
-### Methods with try-except
+### 2.2 Methods with try-except
 
 
 **Regex Pattern**
@@ -121,7 +121,7 @@ $2
         with tracer.start_active_span('$3', child_of=span_ctx) as scope:
             scope.span.set_tag('args', [$4])
 ```
-### Methods without try-except
+### 2.3 Methods without try-except
 **Regex Pattern**
 ```
 (    )(def\s([\w]+)\s?\(self,*\s*([\w,\s=']*)\)\s*:)
@@ -137,7 +137,7 @@ $2
 !!! Caution
     Indentation of the file reduces the starting spaces upto 4 spaces with cause `except` to deviate from consective `try`. You should have to replace the spaces accouding to the starting try block.
 
-### Handling Exception
+### 2.4 Handling Exception
 **Regex Pattern**
 ```
 (\s*)except Exception as ex:
@@ -148,7 +148,7 @@ $0
     $1scope.span.set_tag('Exception', ex)
 ```
 
-### Handling Return Statuses
+### 2.5 Handling Return Statuses
 
 !!! Tip
     Make sure `regex` button is pressed in vscode search field.
@@ -255,7 +255,7 @@ $1scope.span.set_tag("log", $2)$0
 
 
 ***
-## Keywords Used in All APIS
+## 3. Keywords Used in All APIS
 
 `args`
 `response`
@@ -264,10 +264,10 @@ $1scope.span.set_tag("log", $2)$0
 
 
 ***
-## RPC Inject/Extract Calls Regex
+## 4. RPC Inject/Extract Calls Regex
 
 
-#### Injecting Spans Replacement
+#### 4.0 Injecting Spans Replacement
 
 !!! hint
     Do not include url with KONG calling
@@ -301,7 +301,7 @@ headers= carrier
 
 
 
-#### Extracting Spans Replacement
+#### 4.1 Extracting Spans Replacement
 
 !!! hint
     This portion is already implemented while injecting spans
@@ -340,8 +340,8 @@ class\s\w*\(\):
 
 
 ***
-## Branches Created for Tracing
-### Names of Branches
+## 5. Branches Created for Tracing
+### 5.1 Names of Branches
 ```
 git branch
 ```
