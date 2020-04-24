@@ -20,7 +20,7 @@ npm -v
 ```bash
 node -v
 ```
-## 0 Installing Packages
+## 0. Installing Packages
 
 ```bash
 npm init
@@ -73,7 +73,7 @@ Create a new file `.babelrc` with the same directory of `package.json` file.
 !!! hint
     Babel is used to compile the project
 
-## 1 Simple chat app
+## 1. Simple chat app
 Create a file `index.js` on the same level of node_modules directory and paste the following snipet into it.
 
 
@@ -152,7 +152,7 @@ and the `index.html` (client) should look like this —
 {!scripts/socketio/withbootstrap/public/index.html!}
 ```
 
-## 2 **Connect / Disconnect Events** 
+## 2. **Connect / Disconnect Events** 
 
 > [index.js](scripts/socketio/connectDisconnect/index.js)
 
@@ -169,7 +169,7 @@ and the `index.html` (client) should look like this —
 ```
 
 
-## 3 **NameSpace Setup**
+## 3. **NameSpace Setup**
 
 Now, we are going to add a namespace   `tech` to our server.
 
@@ -188,7 +188,7 @@ and the `index.html` (client) should look like this —
 ```
 
 
-## 4 Setting up Rooms
+## 4. Setting up Rooms
 
 **Init Room Javascript**
 
@@ -231,7 +231,12 @@ and the `index.html` (client) should look like this —
 ```
 
 
-## 5 **Complete tech rooms**
+## 5. **Complete tech rooms**
+
+!["DemoApp"](img/socketio/demoapp1_1.png)
+
+
+!["DemoApp"](img/socketio/demoapp1_2.png)
 
 > [index.js](scripts/socketio/room03/index.js)
 
@@ -265,7 +270,31 @@ and the `index.html` (client) should look like this —
 
 ```
 
-## 6 Debug Tool
+
+## 6. Chat App Demo
+
+
+!["DemoApp"](img/socketio/demoapp2.png)
+
+> [server.js](scripts/socketio/demoapp2/server.js)
+
+```javascript
+
+{!scripts/socketio/demoapp2/server.js!}
+```
+
+> [index.html](scripts/socketio/demoapp2/index.js)
+
+```javascript
+
+{!scripts/socketio/demoapp2/index.html!}
+```
+
+
+
+
+
+## 7. Debug Tool
 
 
 **Manually**

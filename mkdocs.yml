@@ -30,11 +30,12 @@ nav:
     - Behaviour Pattern: designPattern/behavioural/behaviour-dp.md
   - Assignment: Contact/ass2.md
   - MKDocs Guide 101: mkdocs101.md
-  - AIO: all-in-one.md
   - Keyboard Shortcuts: keyShortcut.md
-  - Contact:
+  - Contact me:
     - About: Contact/about.md
     - Markdown: output.md
+  - AIO: all-in-one.md
+  
 
 theme:
   name : 'material'

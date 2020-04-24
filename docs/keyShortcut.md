@@ -4,7 +4,7 @@
 
 ## VSCODE
 
-??? hint "Visual Studio Code: Select each occurrence of find"
+???+ hint "Visual Studio Code: Select each occurrence of find"
     ```
     Ctrl+Shift+L Select all occurrences of current selection
 
