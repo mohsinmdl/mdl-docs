@@ -17,7 +17,7 @@ git add --all
 
 ```
 
-### Commiting files
+### Commit files
 ```commandline
 git commit -m "message"
 git commit -am "message with adding file to the staging area "
@@ -31,7 +31,7 @@ git log
 git status 
 ```
 
-### Unstaging files
+### Unstag files
 ``` sh
 git reset --hard
 
@@ -50,16 +50,16 @@ In Git, branches are a part of your everyday development process. Git branches a
 git branch <branch-name>
 git checkout -b <branch-name>
 ```
-### Merging a branch
+### Merge branch
 ```commandline
 git merge <source-branch-name>
 ```
-### Listing branches 
+### List branches 
 ```commandline
 git branch 
 git brach --list
 ```
-### Removing a branch
+### Remove branch
 
 ##### Remotly
 ```commandline
@@ -80,17 +80,17 @@ git tag <tag-name>
 ```commandline
 git tag -f <new-tag-name>
 ```
-### Listing tags
+### List tags
 ```commandline
 git tag -l
 git tag
 ```
-### Removing a tag
+### Remove tag
 ```commandline
 git tag -d <tag-name>
 ```
 
-## Fixing Common issues
+## Fix Common issues
 ***
 
 ### 
@@ -153,7 +153,7 @@ git reset HEAD~ --soft
 ```commandline
 git stash
 ```
-### Taking stash file to the staging folder
+### Take stash file to the stage folder
 ```commandline
 git stash pop
 git add --all
@@ -170,7 +170,7 @@ git checkout <branch-name>
 ``` 
 
 
-## Adding and Pushing an existing repository
+## Add and Push an existing repository
 ***
 ```
 git remote add origin <link-to-github-repo>
@@ -209,7 +209,7 @@ git remote -v
 
 ```
 
-## Adding submodule to git repo
+## Add submodule to git repo
 ```
 git submodule add https://github.com/mohsinmdl/mohsinmdl.github.io.git site
 ```
@@ -219,7 +219,7 @@ git submodule add https://github.com/mohsinmdl/mohsinmdl.github.io.git site
 git submodule update --remote --merge
 ```
 
-## Remving git from directory
+## Remove git from directory
 ```
 rm -rf .git
 ```
@@ -322,7 +322,7 @@ git submodule foreach git checkout master
 ```
 ***
 
-## Pushing all submodules recursively
+## Push all submodules recursively
 
 git1.7.11 ([ANNOUNCE] Git 1.7.11.rc1) mentions:
 >"git push --recurse-submodules" learned to optionally look into the histories of submodules >bound to the superproject and push them out.
