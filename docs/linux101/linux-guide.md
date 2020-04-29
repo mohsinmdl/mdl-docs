@@ -71,3 +71,10 @@ $ tree
 2 directories, 4 files
 This should solve your problem.
 ```
+
+
+## Permission to Directory/File
+
+```bash
+sudo chmod a+rwx <path-of-directory>
+```
