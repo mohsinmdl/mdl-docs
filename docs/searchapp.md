@@ -3,7 +3,7 @@
 
 ## Aim
 
-The aim of this documentation is to provide knowledge of working of the following technologies together.
+The aim of this documentation is to provide  working knowledge of the following technologies.
 
 - Neo4j
 - Elasticsearch
@@ -67,6 +67,9 @@ volumes:
   neo4j-conf:
   neo4j-plugins:
 ```
+!!! note
+    you can find `docker-compose.yml` file in the attached `helping-scripts` folder.
+
 
 
 **Step 02 - Download Plugins**
@@ -154,10 +157,11 @@ networks:
     external: true
 ```
 
-**Step 05 - Append the following snippet to elasticsaerch.yml file**
-
 !!! note
-    you can find `elasticsearch.yml` file in the attached `helping-scripts`.
+    you can find `docker-compose.yml` file in the attached `helping-scripts` folder.
+
+
+**Step 05 - Append the following snippet to elasticsaerch.yml file**
 
 
 ```
@@ -169,11 +173,16 @@ http.cors.allow-methods : OPTIONS, HEAD, GET, POST, PUT, DELETE
 http.cors.allow-headers : "X-Requested-With,X-Auth-Token,Content-Type, Content-Length, Authorization"
 http.cors.allow-credentials: true
 ```
+!!! note
+    you can find `elasticsearch.yml` file in the attached `helping-scripts`.
+
 
 
 ## Searching data from Elasticsearch using React
 
 This react app provide you an interface to search the data from the elasticsearch.
+
+> index.html
 
 ```html
 <!DOCTYPE html>
@@ -358,5 +367,11 @@ This react app provide you an interface to search the data from the elasticsearc
 ```
 
 
+!!! note
+    you can find `index.html` file in the attached `helping-scripts` folder.
+
+
 ## Conclusion
-It then presents a working example of making a simple search app for elasticsearch data.Hope it helps. Please let me know if you have any questions or feedback. I might miss something, I need to hear from you. JazakAllahu khaira :)
+This documentation presents a working example of making a simple search app for elasticsearch data.
+
+Hope it helps, please let me know if you have any questions or feedback. I might miss something, I need to hear from you. JazakAllahu khaira :)
