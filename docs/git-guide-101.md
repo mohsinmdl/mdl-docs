@@ -331,3 +331,11 @@ So you can use:
 ```
 git push --recurse-submodules=on-demand
 ```
+
+## Sort branch
+
+```bash
+git branch --sort=-committerdate  # DESC
+git branch --sort=committerdate  # ASC
+```
+
