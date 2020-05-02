@@ -283,7 +283,7 @@ and the `index.html` (client) should look like this —
 {!scripts/socketio/demoapp2/server.js!}
 ```
 
-> [index.html](scripts/socketio/demoapp2/index.js)
+> [index.html](scripts/socketio/demoapp2/index.html)
 
 ```javascript
 
