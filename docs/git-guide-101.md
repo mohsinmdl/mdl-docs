@@ -339,3 +339,34 @@ git branch --sort=-committerdate  # DESC
 git branch --sort=committerdate  # ASC
 ```
 
+## How to change my Git username in terminal?
+
+To set your account's default identity globally run below commands
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git config --global user.password "your password"
+```
+
+
+To set the identity only in current repository , remove --global and run below commands in your Project/Repo root directory
+```
+git config user.email "you@example.com"
+git config user.name "Your Name"
+git config user.password "your password"
+```
+Example:
+```
+email -> organization email Id
+name  -> mostly <employee Id> or <FirstName, LastName> 
+```
+
+!!! note ""
+    **Note: ** you can check these values in your GitHub profile or Bitbucket profile
+
+
+
+
+
+
+
