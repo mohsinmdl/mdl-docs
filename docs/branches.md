@@ -5,15 +5,10 @@ git branch
 
 ### Company Post Apis
 
+- **users/mohsin/company-PhotoPost**
 - **users/mohsin/company-StatusPost**
-    - Create company blog post 
-    - Update company blog post
-    - Delete company blog post
-
 - **users/mohsin/company-BlogPost**
-    - Create company blog post 
-    - Update company blog post
-    - Delete company blog post
+
 
 ### Polyglot persistence to elasticsearch
 - **users/mohsin/Sync-Neo4j-ElasticSearch**
