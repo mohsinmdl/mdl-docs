@@ -3,7 +3,13 @@
 git branch
 ```
 
-### Company BlogPost Apis
+### Company Post Apis
+
+- **users/mohsin/company-StatusPost**
+    - Create company blog post 
+    - Update company blog post
+    - Delete company blog post
+
 - **users/mohsin/company-BlogPost**
     - Create company blog post 
     - Update company blog post
