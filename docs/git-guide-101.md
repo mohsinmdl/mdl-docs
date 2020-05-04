@@ -365,6 +365,14 @@ name  -> mostly <employee Id> or <FirstName, LastName>
     **Note: ** you can check these values in your GitHub profile or Bitbucket profile
 
 
+## You can view all of your settings and where they are coming from using:
+
+    $ git config --list --show-origin
+
+
+
+
+
 
 
 
