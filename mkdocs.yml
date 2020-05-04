@@ -22,7 +22,6 @@ nav:
   - Socket.io 101: socketio.md
   - SearchApp: searchapp.md
   - Git Guide 101:  git-guide-101.md
-  - Git Guide Guru: git-guide-guru.md
   - Flask Guide 101: flask-doc/Flask Guide 101.md
   - Design Pattern:
     - What is Design Pattern: designPattern/design-pattern-intro.md

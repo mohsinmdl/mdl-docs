@@ -8,8 +8,7 @@
   },
   "scripts": {
     "mkdocs_serve": "mkdocs serve --dev-addr=0.0.0.0:6565",
-    "mkdocs_build": "mkdocs build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mkdocs_build": "mkdocs build"
   },
   "author": "Mohsin Mahmood",
   "license": "ISC"
