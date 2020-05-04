@@ -227,13 +227,13 @@ rm -rf .git
 ## Error
 Git refusing to merge unrelated histories 
 
-!!! failure
+!!! error
     git  pull origin master
     From https://github.com/mohsinmdl/mdl-portfolio
     * branch            master     -> FETCH_HEAD
     fatal: refusing to merge unrelated histories
 
-!!! failure
+!!! error
     There is no tracking information for the current branch.
     Please specify which branch you want to merge with.
     See git-pull(1) for details.
@@ -262,7 +262,7 @@ git config --global credential.helper store
 ```
 
 
-!!! failure
+!!! error
     git submodule add https://github.com/mohsinmdl/blogs-deploy public
     'public' already exists in the index
 
@@ -280,7 +280,7 @@ git rm -f --cached <DIR>
 ```
 
 Error
-!!! failure
+!!! error
     fatal: Please stage your changes to .gitmodules or stash them to proceed
 
 ```
