@@ -23,6 +23,7 @@ nav:
   - SearchApp: searchapp.md
   - Git Guide 101:  git-guide-101.md
   - Flask Guide 101: flask-doc/Flask Guide 101.md
+  - Ruby on Rails 101: rails101.md
   - Design Pattern:
     - What is Design Pattern: designPattern/design-pattern-intro.md
     - Creational Pattern: designPattern/creational/creational-dp.md
