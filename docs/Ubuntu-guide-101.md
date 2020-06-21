@@ -23,3 +23,31 @@ name: auto-save-directory, value: file:///full/path/
 
 A tip for anyone who is using the configuration editor in unity: click on the arrow to the left the org text to expand it.
 
+## System and Hardware Information in Linux
+
+```bash
+sudo lshw
+```
+
+
+You can print a summary of your hardware information by using the -short option.
+
+```bash
+sudo lshw -short
+```
+
+
+```bash
+sudo lshw -html > lshw.html
+```
+
+
+## How to View Linux CPU Information
+
+```bash
+lscpu
+```
+
+
+for more click [here](https://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/)
+
